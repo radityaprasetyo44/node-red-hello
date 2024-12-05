@@ -1,0 +1,659 @@
+[
+    {
+        "id": "ebaefd1808fcd982",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "625ab5134cf616ec",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a08f3aa4d425bf0a",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "50260bb2c08719a2",
+        "type": "ui_tab",
+        "name": "Registration",
+        "icon": "account_box",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "0f1445ce4135f019",
+        "type": "ui_group",
+        "name": "Profile",
+        "tab": "50260bb2c08719a2",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "20e5206ddeeb9964",
+        "type": "ui_tab",
+        "name": "Admin",
+        "icon": "verified_user",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "201e83bbba4f13da",
+        "type": "ui_group",
+        "name": "Verification",
+        "tab": "20e5206ddeeb9964",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "51b30a65d7111ad1",
+        "type": "postgreSQLConfig",
+        "name": "",
+        "host": "127.0.0.1",
+        "hostFieldType": "str",
+        "port": "5432",
+        "portFieldType": "num",
+        "database": "testing",
+        "databaseFieldType": "str",
+        "ssl": "false",
+        "sslFieldType": "bool",
+        "applicationName": "",
+        "applicationNameType": "str",
+        "max": "10",
+        "maxFieldType": "num",
+        "idle": "1000",
+        "idleFieldType": "num",
+        "connectionTimeout": "10000",
+        "connectionTimeoutFieldType": "num",
+        "user": "postgres",
+        "userFieldType": "str",
+        "password": "password",
+        "passwordFieldType": "str"
+    },
+    {
+        "id": "686ee02c.306a",
+        "type": "postgreSQLConfig",
+        "name": "@127.0.0.1:5432/postgres",
+        "host": "127.0.0.1",
+        "hostFieldType": "str",
+        "port": "5432",
+        "portFieldType": "num",
+        "database": "isdb",
+        "databaseFieldType": "str",
+        "ssl": "false",
+        "sslFieldType": "bool",
+        "max": "10",
+        "maxFieldType": "num",
+        "idle": "1000",
+        "idleFieldType": "num",
+        "connectionTimeout": "10000",
+        "connectionTimeoutFieldType": "num",
+        "user": "pi",
+        "userFieldType": "str",
+        "password": "raspberry",
+        "passwordFieldType": "str"
+    },
+    {
+        "id": "711d368a.8b1ec8",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "5ca14fd8.ffd9b",
+        "type": "ui_group",
+        "name": "Last",
+        "tab": "711d368a.8b1ec8",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "e3ecbb2eae2e5998",
+        "type": "postgresDB",
+        "name": "Get (Postgresql)",
+        "throwErrors": true,
+        "throwErrorsFieldType": "bool",
+        "host": "127.0.0.1",
+        "hostFieldType": "str",
+        "port": "5432",
+        "portFieldType": "num",
+        "database": "testing",
+        "databaseFieldType": "str",
+        "ssl": "false",
+        "sslFieldType": "bool",
+        "max": "10",
+        "maxFieldType": "num",
+        "min": "1",
+        "minFieldType": "num",
+        "idle": "1000",
+        "idleFieldType": "num",
+        "connectionTimeout": "10000",
+        "connectionTimeoutFieldType": "num",
+        "user": "postgres",
+        "userFieldType": "str",
+        "password": "password",
+        "passwordFieldType": "str"
+    },
+    {
+        "id": "de03e47e5822e824",
+        "type": "postgresDB",
+        "name": "local",
+        "throwErrors": true,
+        "throwErrorsFieldType": "bool",
+        "host": "127.0.0.1",
+        "hostFieldType": "str",
+        "port": "5432",
+        "portFieldType": "num",
+        "database": "testing",
+        "databaseFieldType": "str",
+        "ssl": "false",
+        "sslFieldType": "bool",
+        "max": "10",
+        "maxFieldType": "num",
+        "min": "1",
+        "minFieldType": "num",
+        "idle": "1000",
+        "idleFieldType": "num",
+        "connectionTimeout": "10000",
+        "connectionTimeoutFieldType": "num",
+        "user": "postgres",
+        "userFieldType": "str",
+        "password": "password",
+        "passwordFieldType": "str"
+    },
+    {
+        "id": "810b02d616397bb1",
+        "type": "ui_form",
+        "z": "ebaefd1808fcd982",
+        "name": "",
+        "label": "Registration Form",
+        "group": "0f1445ce4135f019",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Name",
+                "value": "name",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Email",
+                "value": "email",
+                "type": "email",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "name": "",
+            "email": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 190,
+        "y": 240,
+        "wires": [
+            [
+                "2ac6ba6590d60377",
+                "6428b5e2da1413f1",
+                "1e7d6d6a8930dc9b"
+            ]
+        ]
+    },
+    {
+        "id": "2ac6ba6590d60377",
+        "type": "debug",
+        "z": "ebaefd1808fcd982",
+        "name": "Register's Resp",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "6428b5e2da1413f1",
+        "type": "ui_toast",
+        "z": "ebaefd1808fcd982",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "Cancel",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "registration_notification",
+        "x": 210,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "9af8301317c36ee4",
+        "type": "comment",
+        "z": "ebaefd1808fcd982",
+        "name": "Registration Form",
+        "info": "",
+        "x": 190,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "dc8285f9cc1bbb5d",
+        "type": "comment",
+        "z": "ebaefd1808fcd982",
+        "name": "Verification",
+        "info": "",
+        "x": 160,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "b5925bd7d96c1140",
+        "type": "ui_text",
+        "z": "ebaefd1808fcd982",
+        "group": "201e83bbba4f13da",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "Total Data",
+        "label": "",
+        "format": "Total Data: {{msg.count}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 440,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "60f5ab84d68d1218",
+        "type": "postgresql",
+        "z": "ebaefd1808fcd982",
+        "name": "Insert (PostgreSQL)",
+        "query": "INSERT INTO users (name, email, status)\nVALUES ($1, $2, 'registration');",
+        "postgreSQLConfig": "51b30a65d7111ad1",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 620,
+        "y": 340,
+        "wires": [
+            [
+                "95720f91065a88ec"
+            ]
+        ]
+    },
+    {
+        "id": "95720f91065a88ec",
+        "type": "debug",
+        "z": "ebaefd1808fcd982",
+        "name": "Insert's Resp",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 690,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "1e7d6d6a8930dc9b",
+        "type": "function",
+        "z": "ebaefd1808fcd982",
+        "name": "Get Request",
+        "func": "const {name, email } = msg.payload;\nmsg.params = [name, email];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 280,
+        "wires": [
+            [
+                "60f5ab84d68d1218"
+            ]
+        ]
+    },
+    {
+        "id": "5ff7dc6de96aeb67",
+        "type": "postgresql",
+        "z": "ebaefd1808fcd982",
+        "name": "Get (PostgreSQL)",
+        "query": "SELECT * FROM users\nWHERE status = 'registration'\nORDER BY id DESC;",
+        "postgreSQLConfig": "51b30a65d7111ad1",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 330,
+        "y": 520,
+        "wires": [
+            [
+                "1ac09228bda7bd64",
+                "076249b83fdc1a17"
+            ]
+        ]
+    },
+    {
+        "id": "1ac09228bda7bd64",
+        "type": "function",
+        "z": "ebaefd1808fcd982",
+        "name": "Conv Data",
+        "func": "return {\n    \"data\": msg.payload,\n    \"count\": msg.payload.length\n};",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 520,
+        "wires": [
+            [
+                "b5925bd7d96c1140"
+            ]
+        ]
+    },
+    {
+        "id": "394276d5eca7b7e8",
+        "type": "inject",
+        "z": "ebaefd1808fcd982",
+        "name": "Payload",
+        "props": [
+            {
+                "p": "status",
+                "v": "registration",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 160,
+        "y": 520,
+        "wires": [
+            [
+                "5ff7dc6de96aeb67"
+            ]
+        ]
+    },
+    {
+        "id": "076249b83fdc1a17",
+        "type": "ui_table",
+        "z": "ebaefd1808fcd982",
+        "group": "201e83bbba4f13da",
+        "name": "List",
+        "order": 1,
+        "width": "6",
+        "height": "8",
+        "columns": [
+            {
+                "field": "no",
+                "title": "No.",
+                "width": "5px",
+                "align": "left",
+                "formatter": "rownum",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "name",
+                "title": "Name",
+                "width": "20px",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "email",
+                "title": "Email",
+                "width": "50px",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 0,
+        "cts": false,
+        "x": 430,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "bff307616156e11a",
+        "type": "ui_button",
+        "z": "ebaefd1808fcd982",
+        "name": "Refresh",
+        "group": "201e83bbba4f13da",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Refresh",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "refresh",
+        "payload": "registration",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 160,
+        "y": 580,
+        "wires": [
+            [
+                "5ff7dc6de96aeb67"
+            ]
+        ]
+    },
+    {
+        "id": "edda489cd8405560",
+        "type": "inject",
+        "z": "625ab5134cf616ec",
+        "name": "Payload",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Hello World!",
+        "payloadType": "str",
+        "x": 240,
+        "y": 100,
+        "wires": [
+            [
+                "0a4f3ce5fa5110e2"
+            ]
+        ]
+    },
+    {
+        "id": "7a1f48b568a91730",
+        "type": "debug",
+        "z": "625ab5134cf616ec",
+        "name": "Debug",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "0a4f3ce5fa5110e2",
+        "type": "trigger",
+        "z": "625ab5134cf616ec",
+        "name": "",
+        "op1": "1",
+        "op2": "Payload",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "250",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 440,
+        "y": 100,
+        "wires": [
+            [
+                "7a1f48b568a91730"
+            ]
+        ]
+    }
+]
