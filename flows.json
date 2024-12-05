@@ -2,7 +2,7 @@
     {
         "id": "ebaefd1808fcd982",
         "type": "tab",
-        "label": "Flow 1",
+        "label": "Registration's Flow",
         "disabled": false,
         "info": "",
         "env": []
@@ -473,7 +473,7 @@
         "id": "1ac09228bda7bd64",
         "type": "function",
         "z": "ebaefd1808fcd982",
-        "name": "Conv Data",
+        "name": "Conv's Data",
         "func": "return {\n    \"data\": msg.payload,\n    \"count\": msg.payload.length\n};",
         "outputs": 1,
         "timeout": 0,
@@ -485,7 +485,8 @@
         "y": 520,
         "wires": [
             [
-                "b5925bd7d96c1140"
+                "b5925bd7d96c1140",
+                "cb7c8d2ace21470b"
             ]
         ]
     },
@@ -590,29 +591,17 @@
         ]
     },
     {
-        "id": "edda489cd8405560",
-        "type": "inject",
-        "z": "625ab5134cf616ec",
-        "name": "Payload",
-        "props": [
-            {
-                "p": "payload"
-            }
+        "id": "cb7c8d2ace21470b",
+        "type": "link out",
+        "z": "ebaefd1808fcd982",
+        "name": "link out 1",
+        "mode": "link",
+        "links": [
+            "4024d6e515f15c26"
         ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "Hello World!",
-        "payloadType": "str",
-        "x": 240,
-        "y": 100,
-        "wires": [
-            [
-                "0a4f3ce5fa5110e2"
-            ]
-        ]
+        "x": 705,
+        "y": 520,
+        "wires": []
     },
     {
         "id": "7a1f48b568a91730",
@@ -627,29 +616,20 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 660,
-        "y": 100,
+        "x": 300,
+        "y": 180,
         "wires": []
     },
     {
-        "id": "0a4f3ce5fa5110e2",
-        "type": "trigger",
+        "id": "4024d6e515f15c26",
+        "type": "link in",
         "z": "625ab5134cf616ec",
-        "name": "",
-        "op1": "1",
-        "op2": "Payload",
-        "op1type": "str",
-        "op2type": "str",
-        "duration": "250",
-        "extend": false,
-        "overrideDelay": false,
-        "units": "ms",
-        "reset": "",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 440,
-        "y": 100,
+        "name": "link in 1",
+        "links": [
+            "cb7c8d2ace21470b"
+        ],
+        "x": 125,
+        "y": 180,
         "wires": [
             [
                 "7a1f48b568a91730"
