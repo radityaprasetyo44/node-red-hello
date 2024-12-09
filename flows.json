@@ -272,6 +272,25 @@
         "passwordFieldType": "str"
     },
     {
+        "id": "2e74a842b119dec3",
+        "type": "ui_tab",
+        "name": "Login",
+        "icon": "login",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "45b8c5ce105180a2",
+        "type": "ui_group",
+        "name": "Login",
+        "tab": "2e74a842b119dec3",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
         "id": "810b02d616397bb1",
         "type": "ui_form",
         "z": "ebaefd1808fcd982",
@@ -602,6 +621,116 @@
         "x": 705,
         "y": 520,
         "wires": []
+    },
+    {
+        "id": "e994427984369062",
+        "type": "comment",
+        "z": "ebaefd1808fcd982",
+        "name": "Login Form",
+        "info": "",
+        "x": 170,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "2b73c5fd1c29c0a4",
+        "type": "ui_form",
+        "z": "ebaefd1808fcd982",
+        "name": "",
+        "label": "Login Form",
+        "group": "45b8c5ce105180a2",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Email",
+                "value": "email",
+                "type": "email",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Password",
+                "value": "password",
+                "type": "password",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "email": "",
+            "password": ""
+        },
+        "payload": "",
+        "submit": "login",
+        "cancel": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 170,
+        "y": 760,
+        "wires": [
+            [
+                "7e1292fce3db5614"
+            ]
+        ]
+    },
+    {
+        "id": "7e1292fce3db5614",
+        "type": "function",
+        "z": "ebaefd1808fcd982",
+        "name": "Get Request",
+        "func": "const { email } = msg.payload;\nmsg.params = [email];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 800,
+        "wires": [
+            [
+                "f57947c043f2c45e"
+            ]
+        ]
+    },
+    {
+        "id": "fec23d232c3a83c0",
+        "type": "debug",
+        "z": "ebaefd1808fcd982",
+        "name": "Login Resp",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 470,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "f57947c043f2c45e",
+        "type": "postgresql",
+        "z": "ebaefd1808fcd982",
+        "name": "Get (PostgreSQL)",
+        "query": "SELECT * FROM USERS\nWHERE email = $1",
+        "postgreSQLConfig": "51b30a65d7111ad1",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 410,
+        "y": 840,
+        "wires": [
+            [
+                "fec23d232c3a83c0"
+            ]
+        ]
     },
     {
         "id": "7a1f48b568a91730",
